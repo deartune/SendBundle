@@ -23,11 +23,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         TextView editTextSending=(EditText) findViewById(R.id.editTextSending);
         String message=((EditText) findViewById(R.id.editTextSending)).getText().toString();
-
+        TextView editTextColor=(EditText) findViewById(R.id.editTextColor);
+        String message1=((EditText) findViewById(R.id.editTextColor)).getText().toString();
+        TextView editTextSeason=(EditText) findViewById(R.id.editTextSeason);
+        String message2=((EditText) findViewById(R.id.editTextSeason)).getText().toString();
 
         if(v.getId()==R.id.buttonSending){
         Bundle bundle=new Bundle();
-        bundle.putString("message",message);
+        bundle.putString("message","모국어:" +message+ " 색깔: "+ message1+" 계절: "+message2);
         Intent intent=new Intent(this, BundleActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
