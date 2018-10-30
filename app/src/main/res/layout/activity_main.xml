@@ -21,6 +21,13 @@
         android:layout_height="510dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="1dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="first 메시지"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/editTextSending"
